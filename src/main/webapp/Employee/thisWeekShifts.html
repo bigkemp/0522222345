@@ -1,0 +1,205 @@
+<div class="container">
+	<h3>
+		Hello : <br /> thisWeekShifts
+		<!-- 		 		{{thisWeekShiftsController.sunMShift}}<br><br>
+ -->
+	</h3>
+	<br> <br>
+
+	<div class="row" align="center">
+		<div class="container" align="center">
+
+			<div style="width: 5%; float: left;"></div>
+
+			<div style="width: 90%; float: left;">
+				<div class="row" align="center">
+					<div class="day">
+
+						<table class="calendar table table-bordered">
+							<thead>
+							<tr>
+									<th></th>
+									<th style="float: left">
+										<button type="button" class="btn btn-danger">
+											<!-- 						change functionality						data-ng-click="AvilableFVController.logOut()">
+ -->
+											<span class="glyphicon glyphicon-left"></span> next
+										</button>
+									</th>
+									<th></th>
+									<th style="float: left">{{thisWeekShiftsController.sunMShift.shift_date
+										| date : format : "d/M/yyyy" }}</th>
+									<th style="text-align: center">to</th>
+									<th style="float: left">{{
+										thisWeekShiftsController.satMShift.shift_date | date : format
+										: "d/M/yyyy" }}</th>
+									<th></th>
+									<th style="float: right">
+										<button type="button" class="btn btn-danger">
+											<!-- 				change functionality							data-ng-click="AvilableFVController.logOut()">
+ -->
+											<span class="glyphicon glyphicon-right"></span> previous
+										</button>
+									</th>
+							<tr>
+									<td class="row" width="10%"></td>
+									<td width="12.85%">Sunday<br>{{
+										thisWeekShiftsController.sunMShift.shift_date | date : format
+										: "d/M/yyyy" }}
+									</td>
+									<td width="12.85%">Monday<br>{{
+										thisWeekShiftsController.monMShift.shift_date | date : format
+										: "d/M/yyyy" }}
+									</td>
+									<td width="12.85%">Tuesday<br>{{
+										thisWeekShiftsController.tueMShift.shift_date | date : format
+										: "d/M/yyyy" }}
+									</td>
+									<td width="12.85%">Wednesday<br>{{
+										thisWeekShiftsController.wedMShift.shift_date | date : format
+										: "d/M/yyyy" }}
+									</td>
+									<td width="12.85%">Thursday<br>{{
+										thisWeekShiftsController.thuMShift.shift_date | date : format
+										: "d/M/yyyy" }}
+									</td>
+									<td width="12.85%">Friday<br>{{
+										thisWeekShiftsController.friMShift.shift_date | date : format
+										: "d/M/yyyy" }}
+									</td>
+									<td width="12.85%">Saturday<br>{{
+										thisWeekShiftsController.satMShift.shift_date | date : format
+										: "d/M/yyyy" }}
+									</td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th class="row" width="10%">start: {{
+										thisWeekShiftsController.sunMShift.shift_start | date : format
+										: "HH:mm:ss" }} <br> end: {{
+										thisWeekShiftsController.sunMShift.shift_end | date : format :
+										"HH:mm:ss" }}
+									</th>
+
+									<td width="12.85%"><p
+											data-ng-repeat="employee in thisWeekShiftsController.sunMShift.shift_employees ">{{
+											employee.employee_name }}</p></td>
+
+									<td width="12.85%"><p
+											data-ng-repeat="employee in thisWeekShiftsController.monMShift.shift_employees ">{{
+											employee.employee_name }}</p></td>
+
+									<td width="12.85%"><p
+											data-ng-repeat="employee in thisWeekShiftsController.tueMShift.shift_employees ">{{
+											employee.employee_name }}</p></td>
+
+									<td width="12.85%"><p
+											data-ng-repeat="employee in thisWeekShiftsController.wedMShift.shift_employees ">{{
+											employee.employee_name }}</p></td>
+
+									<td width="12.85%">
+										<p
+											data-ng-repeat="employee in thisWeekShiftsController.thuMShift.shift_employees ">{{
+											employee.employee_name }}</p>
+									</td>
+
+									<td width="12.85%"><p
+											data-ng-repeat="employee in thisWeekShiftsController.friMShift.shift_employees ">{{
+											employee.employee_name }}</p></td>
+
+									<td width="12.85%"><p
+											data-ng-repeat="employee in thisWeekShiftsController.satMShift.shift_employees ">{{
+											employee.employee_name }}</p></td>
+
+								</tr>
+
+								<tr>
+									<th class="row" width="10%">
+										start: {{ thisWeekShiftsController.sunNShift.shift_start | date : format : "HH:mm" }} 
+										<br> 
+										end: {{ thisWeekShiftsController.sunNShift.shift_end | date : format : "HH:mm" }}
+									</th>
+
+									<td width="12.85%"><p
+											data-ng-repeat="employee in thisWeekShiftsController.sunNShift.shift_employees ">
+											{{ employee.employee_name }}</p></td>
+
+									<td width="12.85%"><p
+											data-ng-repeat="employee in thisWeekShiftsController.monNShift.shift_employees ">
+											{{ employee.employee_name }}</p></td>
+
+									<td width="12.85%">
+										<div data-ng-repeat="employee in thisWeekShiftsController.tueNShift.shift_employees ">
+											{{ employee.employee_name }}
+										</div>
+									</td>
+
+									<td width="12.85%"><p
+											data-ng-repeat="employee in thisWeekShiftsController.wedNShift.shift_employees ">{{
+											employee.employee_name }}</p></td>
+
+									<td width="12.85%">
+										<p
+											data-ng-repeat="employee in thisWeekShiftsController.thuNShift.shift_employees ">{{
+											employee.employee_name }}</p>
+									</td>
+
+									<td width="12.85%"><p
+											data-ng-repeat="employee in thisWeekShiftsController.friNShift.shift_employees ">{{
+											employee.employee_name }}</p></td>
+
+									<td width="12.85%"><p
+											data-ng-repeat="employee in thisWeekShiftsController.satNShift.shift_employees ">{{
+											employee.employee_name }}</p></td>
+								</tr>
+
+								<tr>
+									<th class="row" width="10%">start: {{
+										thisWeekShiftsController.sunEShift.shift_start | date : format : "HH:mm" }} <br> end: {{
+										thisWeekShiftsController.sunEShift.shift_end | date : format : "HH:mm" }}
+									</th>
+
+									<td width="12.85%"><p
+											data-ng-repeat="employee in thisWeekShiftsController.sunEShift.shift_employees ">{{
+											employee.employee_name }}</p></td>
+
+									<td width="12.85%">
+										<div data-ng-repeat="employee in thisWeekShiftsController.monEShift.shift_employees ">
+											{{ employee.employee_name }}
+										</div>
+									</td>
+
+									<td width="12.85%"><p
+											data-ng-repeat="employee in thisWeekShiftsController.tueEShift.shift_employees ">{{
+											employee.employee_name }}</p></td>
+
+									<td width="12.85%"><p
+											data-ng-repeat="employee in thisWeekShiftsController.wedEShift.shift_employees ">{{
+											employee.employee_name }}</p></td>
+
+									<td width="12.85%">
+										<p
+											data-ng-repeat="employee in thisWeekShiftsController.thuEShift.shift_employees ">{{
+											employee.employee_name }}</p>
+									</td>
+
+									<td width="12.85%"><p
+											data-ng-repeat="employee in thisWeekShiftsController.friEShift.shift_employees ">{{
+											employee.employee_name }}</p></td>
+
+									<td width="12.85%"><p
+											data-ng-repeat="employee in thisWeekShiftsController.satEShift.shift_employees ">{{
+											employee.employee_name }}</p></td>
+								</tr>
+
+							</tbody>
+						</table>
+
+					</div>
+				</div>
+				<div style="width: 5% float: left;"></div>
+
+			</div>
+		</div>
+	</div>
